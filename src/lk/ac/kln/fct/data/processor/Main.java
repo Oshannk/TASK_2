@@ -15,11 +15,10 @@ public class Main {
 
     public static void sortAndPrint(ArrayList<Record> records) {
         records.sort((record1, record2) -> Integer.compare(record2.getCases(), record1.getCases()));
-        for (int i = 0; i < records.size(); i++) {
-            if (records.get(i).getCases() >= 1000) {
-                System.out.println(records.get(i).getCountriesAndTerritories() + " : " + records.get(i).getCases() + " : " + records.get(i).getDeaths());
+        for (Record i: records) {
+            if (i.getCases() >= 1000) {
+                System.out.println(i.getCountriesAndTerritories() + " : " + i.getCases() + " : " + i.getDeaths());
             }
         }
-
     }
 }
